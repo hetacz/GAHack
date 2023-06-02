@@ -1,5 +1,5 @@
-import org.springframework.boot.buildpack.platform.build.PullPolicy
-import org.springframework.boot.gradle.tasks.bundling.BootBuildImage
+//import org.springframework.boot.buildpack.platform.build.PullPolicy
+//import org.springframework.boot.gradle.tasks.bundling.BootBuildImage
 
 plugins {
     java
@@ -21,9 +21,9 @@ repositories {
     mavenCentral()
 }
 
-springBoot {
-    buildInfo()
-}
+//springBoot {
+//    buildInfo()
+//}
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
@@ -42,7 +42,7 @@ tasks.withType<Test> {
     useJUnitPlatform()
 }
 
-tasks.withType<BootBuildImage> {
-    imageName.set("hetacz/${project.name}${project.version}")
-    pullPolicy.set(PullPolicy.IF_NOT_PRESENT)
-}
+//tasks.withType<BootBuildImage> {
+//    imageName.set("hetacz/${project.name}${project.version}")
+//    pullPolicy.set(PullPolicy.IF_NOT_PRESENT)
+//}
